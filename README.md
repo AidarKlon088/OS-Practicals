@@ -27,7 +27,6 @@
 - Bash
 - Python
 - Git и GitHub
-- GCC
 - VS Code
 
 ## Запуск
