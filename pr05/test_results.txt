@@ -1,0 +1,17 @@
+OK  set1 FCFS порядок: ['P1', 'P2', 'P3', 'P4']
+OK  set1 FCFS WT/TAT: (5.75, 11.25)
+OK  set1 SJF порядок: ['P1', 'P2', 'P4', 'P3']
+OK  set1 SJF WT/TAT: (5.25, 10.75)
+OK  set1 RR q=3 порядок: ['P1', 'P2', 'P3', 'P4', 'P1', 'P3', 'P4', 'P3']
+OK  set1 RR q=3 завершение: {'P1': 14, 'P2': 6, 'P3': 22, 'P4': 20}
+OK  set1 RR q=3 WT/TAT: (8.5, 14.0)
+OK  set2 FCFS WT: 17.0
+OK  set2 SJF WT: 3.0
+OK  set2 RR q=4 WT (учебник: 5.66): 5.67
+OK  RR новый раньше вытесненного: ['A', 'B', 'A']
+OK  SJF равный burst: ['A', 'B', 'C']
+OK  простой CPU (fcfs): ['A', 'idle', 'B']
+OK  простой CPU (sjf): ['A', 'idle', 'B']
+OK  простой CPU (rr): ['A', 'idle', 'B']
+
+Все проверки пройдены.
