@@ -1,0 +1,12 @@
+$ ps -e | wc -l
+32
+$ ls -l /proc/self/fd | cat      # stdout ls — это канал
+total 0
+lr-x------ 1 user user 64 Oct 28 21:27 0 -> pipe:[8373]
+l-wx------ 1 user user 64 Oct 28 21:27 1 -> pipe:[12599]
+l-wx------ 1 user user 64 Oct 28 21:27 2 -> /mnt/c/Users/user/Desktop/OS-Practicals/pr07/results_shell.txt
+lr-x------ 1 user user 64 Oct 28 21:27 3 -> /proc/528/fd
+$ mkfifo /tmp/pr07_shell.fifo && ls -l /tmp/pr07_shell.fifo
+prw-r--r-- 1 user user 0 Oct 28 21:27 /tmp/pr07_shell.fifo
+$ echo 'привет через FIFO' > /tmp/pr07_shell.fifo &  cat /tmp/pr07_shell.fifo
+привет через FIFO

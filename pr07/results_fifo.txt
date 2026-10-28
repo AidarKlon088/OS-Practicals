@@ -1,0 +1,21 @@
+$ python3 fifo_reader.py &   # терминал 1
+[reader] PID=521 PPID=476, FIFO /tmp/pr07.fifo (prw-------)
+[reader] open() на чтение — жду писателя...
+$ ls -l /tmp/pr07.fifo
+prw------- 1 user user 0 Oct 28 21:27 /tmp/pr07.fifo
+$ python3 fifo_writer.py     # терминал 2
+[writer] PID=524 PPID=476, открываю /tmp/pr07.fifo на запись
+[writer] отправлено: сообщение 1 от PID 524 в 21:27:14
+[reader] писатель подключился, open() ждал 1.02 с
+[reader] получено: сообщение 1 от PID 524 в 21:27:14
+[writer] отправлено: сообщение 2 от PID 524 в 21:27:14
+[reader] получено: сообщение 2 от PID 524 в 21:27:14
+[writer] отправлено: сообщение 3 от PID 524 в 21:27:14
+[reader] получено: сообщение 3 от PID 524 в 21:27:14
+[writer] отправлено: сообщение 4 от PID 524 в 21:27:15
+[reader] получено: сообщение 4 от PID 524 в 21:27:15
+[writer] отправлено: сообщение 5 от PID 524 в 21:27:15
+[reader] получено: сообщение 5 от PID 524 в 21:27:15
+[writer] FIFO закрыт — читатель получит EOF
+[reader] EOF, всего сообщений: 5
+[reader] FIFO удалён: exists = False
