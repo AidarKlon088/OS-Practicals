@@ -1,0 +1,11 @@
+$ python3 zombie.py &
+Родитель PID=451
+Дочерний PID=453
+$ ps -o pid,ppid,stat,cmd -p 451,453
+    PID    PPID STAT CMD
+    451     349 S+   python3 zombie.py
+    453     451 Z+   [python3] <defunct>
+Зомби-процесс исчез после waitpid()
+$ ps -o pid,stat -p 453      # после waitpid()
+    PID STAT
+(процесс 453 больше не существует)

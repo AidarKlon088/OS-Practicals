@@ -1,0 +1,10 @@
+$ sleep 100 &
+$ ps -o pid,ppid,stat,cmd -p 445
+    PID    PPID STAT CMD
+    445     349 S+   sleep 100
+$ grep -E 'State|VmRSS|Threads' /proc/445/status
+State:	S (sleeping)
+VmRSS:	    7736 kB
+Threads:	1
+$ kill 445
+код завершения: 143 (128 + 15 = SIGTERM)
